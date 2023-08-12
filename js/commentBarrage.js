@@ -14,7 +14,7 @@ const commentBarrageConfig = {
     //twikoo部署地址（Vercel、私有部署），腾讯云的为环境ID
     twikooUrl: "https://twikoo.boo222.love",
     //token获取见前文
-    accessToken: "d601d703d85d420cb16b80cbed62b236",
+    accessToken: "4a49b7d304bf4cf0a7d89cd63638d37f",
     pageUrl: window.location.pathname,
     barrageTimer: [],
     barrageList: [],
