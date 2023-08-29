@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>✨芙卡洛斯✨『Queencard』</title>
+      <link href="/posts/6ad7.html"/>
+      <url>/posts/6ad7.html</url>
+      
+        <content type="html"><![CDATA[<div align="center" class="aspect-ratio">  <iframe    src="https://player.bilibili.com/player.html?aid=744706685&bvid=BV1br4y1Z7ir&cid=1233268863&page=1"     scrolling="no"    border="0"    frameborder="no"    framespacing="0"    high_quality="1"    danmaku="1"    allowfullscreen="true"  ></iframe></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 原神 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>啾~鹿鸣这么可爱真是抱歉啦</title>
       <link href="/posts/292d.html"/>
       <url>/posts/292d.html</url>
@@ -93,6 +112,28 @@
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>闲言碎语</title>
+      <link href="/artitalk/index.html"/>
+      <url>/artitalk/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -311,10 +352,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/anzhiyu.js"/>
-      <url>/js/anzhiyu.js</url>
+      <link href="/js/aplayer1.js"/>
+      <url>/js/aplayer1.js</url>
       
-        <content type="html"><![CDATA[var anzhiyu = {    // 音乐节目切换背景    changeMusicBg: function (isChangeBg = true) {      if (window.location.pathname != "/music/") {        return;      }      const anMusicBg = document.getElementById("an_music_bg");        if (isChangeBg) {        // player listswitch 会进入此处        const musiccover = document.querySelector("#anMusic-page .aplayer-pic");        anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;      } else {        // 第一次进入，绑定事件，改背景        let timer = setInterval(() => {          const musiccover = document.querySelector("#anMusic-page .aplayer-pic");          // 确保player加载完成          console.info(anMusicBg);          if (musiccover) {            clearInterval(timer);            anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;            // 绑定事件            anzhiyu.addEventListenerChangeMusicBg();              // 暂停nav的音乐            if (              document.querySelector("#nav-music meting-js").aplayer &&              !document.querySelector("#nav-music meting-js").aplayer.audio.paused            ) {              anzhiyu.musicToggle();            }          }        }, 100);      }    },    addEventListenerChangeMusicBg: function () {      const anMusicPage = document.getElementById("anMusic-page");      const aplayerIconMenu = anMusicPage.querySelector(".aplayer-info .aplayer-time .aplayer-icon-menu");        anMusicPage.querySelector("meting-js").aplayer.on("loadeddata", function () {        anzhiyu.changeMusicBg();        console.info("player loadeddata");      });        aplayerIconMenu.addEventListener("click", function () {        document.getElementById("menu-mask").style.display = "block";        document.getElementById("menu-mask").style.animation = "0.5s ease 0s 1 normal none running to_show";      });        document.getElementById("menu-mask").addEventListener("click", function () {        if (window.location.pathname != "/music/") return;        anMusicPage.querySelector(".aplayer-list").classList.remove("aplayer-list-hide");      });    },  };    // 调用  anzhiyu.changeMusicBg(false);  var navMusicEl = document.getElementById("nav-music");var anzhiyu = {  //切换音乐播放状态  musicToggle: function (changePaly = true) {    if (!anzhiyu_musicFirst) {      musicBindEvent();      anzhiyu_musicFirst = true;    }    let msgPlay = '<i class="fa-solid fa-play"></i><span>播放音乐</span>'; // 此處可以更改為你想要顯示的文字    let msgPause = '<i class="fa-solid fa-pause"></i><span>暂停音乐</span>'; // 同上，但兩處均不建議更改    if (anzhiyu_musicPlaying) {      navMusicEl.classList.remove("playing");      // 修改右键菜单文案为播放      // document.getElementById("menu-music-toggle").innerHTML = msgPlay;      document.getElementById("nav-music-hoverTips").innerHTML = "音乐已暂停";      // document.querySelector("#consoleMusic").classList.remove("on");      anzhiyu_musicPlaying = false;      navMusicEl.classList.remove("stretch");    } else {      navMusicEl.classList.add("playing");      // 修改右键菜单文案为暂停      // document.getElementById("menu-music-toggle").innerHTML = msgPause;      // document.querySelector("#consoleMusic").classList.add("on");      anzhiyu_musicPlaying = true;      navMusicEl.classList.add("stretch");    }    if (changePaly) document.querySelector("#nav-music meting-js").aplayer.toggle();  },  // 音乐伸缩  musicTelescopic: function () {    if (navMusicEl.classList.contains("stretch")) {      navMusicEl.classList.remove("stretch");    } else {      navMusicEl.classList.add("stretch");    }  },  //音乐上一曲  musicSkipBack: function () {    document.querySelector("#nav-music meting-js").aplayer.skipBack();  },  //音乐下一曲  musicSkipForward: function () {    document.querySelector("#nav-music meting-js").aplayer.skipForward();  },  //获取音乐中的名称  musicGetName: function () {    var x = $(".aplayer-title");    var arr = [];    for (var i = x.length - 1; i >= 0; i--) {      arr[i] = x[i].innerText;    }    return arr[0];  },};// 如果有右键事件 可以在这里写。// addRightMenuClickEvent();]]></content>
+        <content type="html"><![CDATA[var navMusicEl = document.getElementById("nav-music");var anzhiyu = {  //切换音乐播放状态  musicToggle: function (changePaly = true) {    if (!anzhiyu_musicFirst) {      musicBindEvent();      anzhiyu_musicFirst = true;    }    let msgPlay = '<i class="fa-solid fa-play"></i><span>播放音乐</span>'; // 此處可以更改為你想要顯示的文字    let msgPause = '<i class="fa-solid fa-pause"></i><span>暂停音乐</span>'; // 同上，但兩處均不建議更改    if (anzhiyu_musicPlaying) {      navMusicEl.classList.remove("playing");      // 修改右键菜单文案为播放      // document.getElementById("menu-music-toggle").innerHTML = msgPlay;      document.getElementById("nav-music-hoverTips").innerHTML = "音乐已暂停";      // document.querySelector("#consoleMusic").classList.remove("on");      anzhiyu_musicPlaying = false;      navMusicEl.classList.remove("stretch");    } else {      navMusicEl.classList.add("playing");      // 修改右键菜单文案为暂停      // document.getElementById("menu-music-toggle").innerHTML = msgPause;      // document.querySelector("#consoleMusic").classList.add("on");      anzhiyu_musicPlaying = true;      navMusicEl.classList.add("stretch");    }    if (changePaly) document.querySelector("#nav-music meting-js").aplayer.toggle();  },  // 音乐伸缩  musicTelescopic: function () {    if (navMusicEl.classList.contains("stretch")) {      navMusicEl.classList.remove("stretch");    } else {      navMusicEl.classList.add("stretch");    }  },  //音乐上一曲  musicSkipBack: function () {    document.querySelector("#nav-music meting-js").aplayer.skipBack();  },  //音乐下一曲  musicSkipForward: function () {    document.querySelector("#nav-music meting-js").aplayer.skipForward();  },  //获取音乐中的名称  musicGetName: function () {    var x = $(".aplayer-title");    var arr = [];    for (var i = x.length - 1; i >= 0; i--) {      arr[i] = x[i].innerText;    }    return arr[0];  },};// 如果有右键事件 可以在这里写。// addRightMenuClickEvent();]]></content>
       
     </entry>
     
@@ -322,10 +363,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/aplayer1.js"/>
-      <url>/js/aplayer1.js</url>
+      <link href="/js/anzhiyu.js"/>
+      <url>/js/anzhiyu.js</url>
       
-        <content type="html"><![CDATA[var navMusicEl = document.getElementById("nav-music");var anzhiyu = {  //切换音乐播放状态  musicToggle: function (changePaly = true) {    if (!anzhiyu_musicFirst) {      musicBindEvent();      anzhiyu_musicFirst = true;    }    let msgPlay = '<i class="fa-solid fa-play"></i><span>播放音乐</span>'; // 此處可以更改為你想要顯示的文字    let msgPause = '<i class="fa-solid fa-pause"></i><span>暂停音乐</span>'; // 同上，但兩處均不建議更改    if (anzhiyu_musicPlaying) {      navMusicEl.classList.remove("playing");      // 修改右键菜单文案为播放      // document.getElementById("menu-music-toggle").innerHTML = msgPlay;      document.getElementById("nav-music-hoverTips").innerHTML = "音乐已暂停";      // document.querySelector("#consoleMusic").classList.remove("on");      anzhiyu_musicPlaying = false;      navMusicEl.classList.remove("stretch");    } else {      navMusicEl.classList.add("playing");      // 修改右键菜单文案为暂停      // document.getElementById("menu-music-toggle").innerHTML = msgPause;      // document.querySelector("#consoleMusic").classList.add("on");      anzhiyu_musicPlaying = true;      navMusicEl.classList.add("stretch");    }    if (changePaly) document.querySelector("#nav-music meting-js").aplayer.toggle();  },  // 音乐伸缩  musicTelescopic: function () {    if (navMusicEl.classList.contains("stretch")) {      navMusicEl.classList.remove("stretch");    } else {      navMusicEl.classList.add("stretch");    }  },  //音乐上一曲  musicSkipBack: function () {    document.querySelector("#nav-music meting-js").aplayer.skipBack();  },  //音乐下一曲  musicSkipForward: function () {    document.querySelector("#nav-music meting-js").aplayer.skipForward();  },  //获取音乐中的名称  musicGetName: function () {    var x = $(".aplayer-title");    var arr = [];    for (var i = x.length - 1; i >= 0; i--) {      arr[i] = x[i].innerText;    }    return arr[0];  },};// 如果有右键事件 可以在这里写。// addRightMenuClickEvent();]]></content>
+        <content type="html"><![CDATA[var anzhiyu = {    // 音乐节目切换背景    changeMusicBg: function (isChangeBg = true) {      if (window.location.pathname != "/music/") {        return;      }      const anMusicBg = document.getElementById("an_music_bg");        if (isChangeBg) {        // player listswitch 会进入此处        const musiccover = document.querySelector("#anMusic-page .aplayer-pic");        anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;      } else {        // 第一次进入，绑定事件，改背景        let timer = setInterval(() => {          const musiccover = document.querySelector("#anMusic-page .aplayer-pic");          // 确保player加载完成          console.info(anMusicBg);          if (musiccover) {            clearInterval(timer);            anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;            // 绑定事件            anzhiyu.addEventListenerChangeMusicBg();              // 暂停nav的音乐            if (              document.querySelector("#nav-music meting-js").aplayer &&              !document.querySelector("#nav-music meting-js").aplayer.audio.paused            ) {              anzhiyu.musicToggle();            }          }        }, 100);      }    },    addEventListenerChangeMusicBg: function () {      const anMusicPage = document.getElementById("anMusic-page");      const aplayerIconMenu = anMusicPage.querySelector(".aplayer-info .aplayer-time .aplayer-icon-menu");        anMusicPage.querySelector("meting-js").aplayer.on("loadeddata", function () {        anzhiyu.changeMusicBg();        console.info("player loadeddata");      });        aplayerIconMenu.addEventListener("click", function () {        document.getElementById("menu-mask").style.display = "block";        document.getElementById("menu-mask").style.animation = "0.5s ease 0s 1 normal none running to_show";      });        document.getElementById("menu-mask").addEventListener("click", function () {        if (window.location.pathname != "/music/") return;        anMusicPage.querySelector(".aplayer-list").classList.remove("aplayer-list-hide");      });    },  };    // 调用  anzhiyu.changeMusicBg(false);]]></content>
       
     </entry>
     
@@ -454,17 +495,6 @@
     
     <entry>
       <title></title>
-      <link href="/js/meting/meting.js"/>
-      <url>/js/meting/meting.js</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/js/coin/coin.js"/>
       <url>/js/coin/coin.js</url>
       
@@ -480,6 +510,17 @@
       <url>/js/runtime/runtime.js</url>
       
         <content type="html"><![CDATA[var now=new Date;function createtime(){var t=new Date("08/03/2023 00:00:00");now.setTime(now.getTime()+250);var e=(now-t)/1e3/60/60/24,a=Math.floor(e),n=(now-t)/1e3/60/60-24*a,r=Math.floor(n);1==String(r).length&&(r="0"+r);var s=(now-t)/1e3/60-1440*a-60*r,i=Math.floor(s);1==String(i).length&&(i="0"+i);var o=(now-t)/1e3-86400*a-3600*r-60*i,l=Math.round(o);1==String(l).length&&(l="0"+l);let g="";g=r<18&&r>=9?`<img class='boardsign' src='https://cdnjson.com/images/2023/08/05/930a995545c77dea.gif' title='~'><span class='textTip'> <br> 本站居然运行了 ${a} 天</span><span id='runtime'> ${r} 小时 ${i} 分 ${l} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`:`<img class='boardsign' src='https://cdnjson.com/images/2023/08/05/930a995545c77dea.gif' title='~'><span class='textTip'> <br> 本站居然运行了 ${a} 天</span><span id='runtime'> ${r} 小时 ${i} 分 ${l} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=g)}setInterval((()=>{createtime()}),250);var now = new Date();function createtime() {  var grt = new Date("08/03/2023 00:00:00");  now.setTime(now.getTime() + 250);  var days = (now - grt) / 1e3 / 60 / 60 / 24,    dnum = Math.floor(days),    hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,    hnum = Math.floor(hours);  1 == String(hnum).length && (hnum = "0" + hnum);  var minutes = (now - grt) / 1e3 / 60 - 1440 * dnum - 60 * hnum,    mnum = Math.floor(minutes);  1 == String(mnum).length && (mnum = "0" + mnum);  var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,    snum = Math.round(seconds);  1 == String(snum).length && (snum = "0" + snum);  let currentTimeHtml = "";  (currentTimeHtml =    hnum < 18 && hnum >= 9      ? `<img class='boardsign' src='https://cdnjson.com/images/2023/08/05/930a995545c77dea.gif' title='~'><span class='textTip'> <br> 本站居然运行了 ${dnum} 天</span><span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`      : `<img class='boardsign' src='https://cdnjson.com/images/2023/08/05/930a995545c77dea.gif' title='下~'><span class='textTip'> <br> 本站居然运行了 ${dnum} 天</span><span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`),    document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = currentTimeHtml);}setInterval(() => {  createtime();}, 250);]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/meting/meting.js"/>
+      <url>/js/meting/meting.js</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
