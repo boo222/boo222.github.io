@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://boo222.love/fcircle/index.html</loc>
+    
+    <lastmod>2023-09-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://boo222.love/link/index.html</loc>
     
     <lastmod>2023-09-04</lastmod>
@@ -92,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://boo222.love/fcircle/index.html</loc>
-    
-    <lastmod>2023-08-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://boo222.love/posts/3eeb.html</loc>
     
     <lastmod>2023-08-04</lastmod>
@@ -112,7 +112,7 @@
 
   <url>
     <loc>https://boo222.love/</loc>
-    <lastmod>2023-09-04</lastmod>
+    <lastmod>2023-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -120,21 +120,21 @@
   
   <url>
     <loc>https://boo222.love/tags/%E5%8E%9F%E7%A5%9E/</loc>
-    <lastmod>2023-09-04</lastmod>
+    <lastmod>2023-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boo222.love/tags/%E9%B9%BF%E9%B8%A3/</loc>
-    <lastmod>2023-09-04</lastmod>
+    <lastmod>2023-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boo222.love/tags/%E6%B4%9B%E5%A4%A9%E4%BE%9D/</loc>
-    <lastmod>2023-09-04</lastmod>
+    <lastmod>2023-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
